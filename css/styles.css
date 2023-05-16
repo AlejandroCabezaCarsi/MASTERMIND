@@ -1,0 +1,65 @@
+* { 
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.juegoPrincipal{ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+.fila1{ 
+    display: flex;
+}
+.fila2{ 
+    display: flex;
+}
+.fila3{ 
+    display: flex;
+}
+.fila4{ 
+    display: flex;
+}
+.fila5{ 
+    display: flex;
+}
+.fila6{ 
+    display: flex;
+}
+.fila7{ 
+    display: flex;
+}
+.fila8{ 
+    display: flex;
+}
+.fila9{ 
+    display: flex;
+}
+.fila10{ 
+    display: flex;
+}
+.fila11{ 
+    display: flex;
+}
+
+.caja{ 
+    width: 1.5em;
+    height: 1.5em;
+    border: solid black 1px;
+    background-color: yellow;
+}
+
+.columnaDcha{ 
+    height: 100vh;
+    background-color: white;
+}
+
+.cajadcha{
+    width: 3em;
+    height: 3em;
+    background-color: white; 
+
+}
+
