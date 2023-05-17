@@ -1,0 +1,13 @@
+body{ 
+    
+        background-image: url('../img/_9051e05d-95e2-4b66-b47d-6c96ef1263b2.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        height: 100vh;
+        width: 100vw;
+}   
+
+.contenedorPrincipal { 
+    background-color: black;
+}
