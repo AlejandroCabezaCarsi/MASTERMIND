@@ -1,0 +1,30 @@
+.estrellaAmarilla{
+    width: 3em;
+    height: 3em;
+    background-image: url(../img/estrellaCincoPuntasAmarilla.png);
+    background-size: cover;
+
+}
+.estrellaVerde{
+    width: 3em;
+    height: 3em;
+    background-image: url(../img/estrellaCincoPuntasVerde.png);
+    background-size: cover;
+
+}
+.estrellaRoja{
+    width: 3em;
+    height: 3em;
+    background-image: url(../img/estrellaCincoPuntasRoja.png);
+    background-size: cover;
+
+}
+
+.circulosMedio{ 
+    width: 2em;
+    height: 2em;
+    background-color: red;
+    border-radius: 50%;
+}
+
+
