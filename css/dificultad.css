@@ -2,21 +2,30 @@
     width: 3em;
     height: 3em;
     background-image: url(../img/estrellaCincoPuntasAmarilla.png);
-    background-size: cover;
-
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
 }
 .estrellaVerde{
     width: 3em;
     height: 3em;
     background-image: url(../img/estrellaCincoPuntasVerde.png);
-    background-size: cover;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
 
 }
 .estrellaRoja{
     width: 3em;
     height: 3em;
     background-image: url(../img/estrellaCincoPuntasRoja.png);
-    background-size: cover;
+    background-size:contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color:transparent;
+
 
 }
 
@@ -25,6 +34,82 @@
     height: 2em;
     background-color: red;
     border-radius: 50%;
+    ;
 }
+
+@font-face {
+    font-family: "Darumadrop One" ;
+    src: url("../fonts/DarumadropOne-Regular.ttf");
+}
+*{ 
+    box-sizing: border-box;
+    margin: 0em;
+    padding: 0em ;
+    font-family: "Darumadrop One";
+    background-color: black;
+
+    
+}
+
+.navbar{ 
+    display: flex; 
+    flex-direction: row;
+}
+.inicioDificultad{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.dificultadDificultad {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.letraM { 
+    color: #A0D468;
+}
+.letraA { 
+    color: #ED5565;
+}
+.letraS { 
+    color: #4FC1E9;
+}
+.letraT { 
+    color: #ec87c0;
+}
+.letraE { 
+    color: #AC92EC;
+}
+.letraR { 
+    color: #f6bb42;
+}
+.letraI { 
+    color: #fc6e51;
+}
+.letraN { 
+    color: #5D9CEC;
+}
+.letraD { 
+    color: #D770AD;
+}
+
+.tarjeta{
+    background-color:white;
+}
+.cuerpo-tarjeta{
+    background-color:white;
+}
+
+.borde{
+    box-sizing: content-box;
+    border: solid black 4px;
+    box-shadow: #D770AD 0em 0em 0.1em 0.1em;
+    border-radius: 0.2em;
+}
+
+
 
 
