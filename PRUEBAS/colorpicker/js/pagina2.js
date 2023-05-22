@@ -22,6 +22,8 @@ for (i=0 ; i < 4; i++){
 
 }
 
+// COMPROBACI
+
 
 if (combinacionUsuario.join("") === combinacionGanadora.join("")){
 

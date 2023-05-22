@@ -6,8 +6,11 @@ let contenedor3 = document.getElementById ('div3')
 let contenedor4 = document.getElementById ('div4')
 let contador = 0; 
 let boton = document.getElementById("boton")
+let botonBorrar = document.getElementById("botonBorrar")
 
 let arrayColores = [];
+
+
 
 
 const input = document.querySelector("input"); 
@@ -33,21 +36,35 @@ const input = document.querySelector("input");
 
         switch (contador) {
             case 1:
-                contenedor1.style.backgroundColor = input.value
+                contenedor1.style.backgroundColor = input.value;
                 break;
             case 2:
-                contenedor2.style.backgroundColor = input.value
+                contenedor2.style.backgroundColor = input.value;
                 break;
             case 3:
-                contenedor3.style.backgroundColor = input.value
+                contenedor3.style.backgroundColor = input.value;
                 break;
             case 4:
-                contenedor4.style.backgroundColor = input.value
+                contenedor4.style.backgroundColor = input.value;
                 break;
         
         }
         
     })
+
+
+    botonBorrar.addEventListener('click', ()=> { 
+
+        if (contador>=0 || contador <= 4){ 
+            contador--;
+            arrayColores.pop();
+            console.log(arrayColores);
+        } 
+        if (arrayColores[contador] = ""){ 
+            
+        }
+
+    }});
     
 
     const guardaColor = () => { 
