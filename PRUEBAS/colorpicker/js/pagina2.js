@@ -1,35 +1,35 @@
-// Me traigo el array del session storage 
+// // Me traigo el array del session storage 
 
-let arrayColores = ["rojo","azul","amarillo","verde","morado","rosa"]; 
+// let arrayColores = ["rojo","azul","amarillo","verde","morado","rosa"]; 
 
-let combinacionGanadora = [];
+// let combinacionGanadora = [];
 
-// combinacionUsuario = /*colorPicker del juego*/;
+// // combinacionUsuario = /*colorPicker del juego*/;
 
-let combinacionUsuario = []
+// let combinacionUsuario = []
 
-let contador = 0;
+// let contador = 0;
 
-for (i=0 ; i < 4; i++){
+// for (i=0 ; i < 4; i++){
 
-    let posicionRandom = Math.floor(Math.random()*arrayColores.length); 
+//     let posicionRandom = Math.floor(Math.random()*arrayColores.length); 
 
-    combinacionGanadora.push(arrayColores[posicionRandom]); 
+//     combinacionGanadora.push(arrayColores[posicionRandom]); 
 
-    console.log(combinacionGanadora)
-
-
-
-}
-
-// COMPROBACI
+//     console.log(combinacionGanadora)
 
 
-if (combinacionUsuario.join("") === combinacionGanadora.join("")){
 
-    console.log("HAS GANADO");
-}else {
+// }
+
+// // COMPROBACION
+
+
+// if (combinacionUsuario.join("") === combinacionGanadora.join("")){
+
+//     console.log("HAS GANADO");
+// }else {
     
-    console.log("sigue intentandolo");
-}
+//     console.log("sigue intentandolo");
+// }
 
