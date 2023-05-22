@@ -156,6 +156,8 @@ colorAnterior.addEventListener('click', () => {
 
 
 
+
+
 // const colorPickerFacil1 = document.querySelector('#colorPickerFacil1'); 
 // const colorPickerFacil2 = document.querySelector('#colorPickerFacil2'); 
 // const colorPickerFacil3 = document.querySelector('#colorPickerFacil3'); 
