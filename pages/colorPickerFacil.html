@@ -58,10 +58,10 @@
 
             <div class="row m-5">
 
-                <div class="col-6 col-md-3 d-flex justify-content-center"><div id="contenedorColorPickerFacil1" class="circulosMedio m-3"></div></div>
-                <div class="col-6 col-md-3 d-flex justify-content-center"><div id="contenedorColorPickerFacil2" class="circulosMedio m-3"></div></div>
-                <div class="col-6 col-md-3 d-flex justify-content-center"><div id="contenedorColorPickerFacil3" class="circulosMedio m-3"></div></div>
-                <div class="col-6 col-md-3 d-flex justify-content-center"><div id="contenedorColorPickerFacil4" class="circulosMedio m-3"></div></div>
+                <div class="col-6 col-md-3 d-flex justify-content-center"><div id="contenedorColorPickerFacil1" onclick="apareceColorPicker()" class="circulosMedio m-3"></div></div>
+                <div class="col-6 col-md-3 d-flex justify-content-center"><div id="contenedorColorPickerFacil2" onclick="apareceColorPicker()" class="circulosMedio m-3"></div></div>
+                <div class="col-6 col-md-3 d-flex justify-content-center"><div id="contenedorColorPickerFacil3" onclick="apareceColorPicker()" class="circulosMedio m-3"></div></div>
+                <div class="col-6 col-md-3 d-flex justify-content-center"><div id="contenedorColorPickerFacil4" onclick="apareceColorPicker()" class="circulosMedio m-3"></div></div>
    
             </div>
         </div>
@@ -69,8 +69,31 @@
         <div class="container-fluid d-flex justify-content-center">
             
             <div class="row d-flex flex-row ">
-                <button>CONFIRMAR COLOR</button>
-                <input type="color" id="colorPickerFacil">
+                <div class="d-flex justify-content-center">
+                    
+                    <p class="letraD">H</p>
+                    <p class="letraM">A</p>
+                    <p class="letraN">Z</p>
+                    <p class="letraA ms-2">C</p>
+                    <p class="letraI">L</p>
+                    <p class="letraS">I</p>
+                    <p class="letraM">C</p>
+                    <p class="letraT">K</p>
+                    <p class="letraR ms-2">E</p>
+                    <p class="letraE">N</p>
+                    <p class="letraM ms-2">L</p>
+                    <p class="letraI">O</p>
+                    <p class="letraN">S</p>
+                    <p class="letraD ms-2">C</p>
+                    <p class="letraR">I</p>
+                    <p class="letraE">R</p>
+                    <p class="letraT">C</p>
+                    <p class="letraS">U</p>
+                    <p class="letraA">L</p>
+                    <p class="letraM">O</p>
+                    <p class="letraD">S</p>
+                </div>
+                <div id="colorPicker" style="display: none;" class="d-flex justify-content-center"></div>
                 <button>A JUGAR!</button>
             </div>
         </div>
