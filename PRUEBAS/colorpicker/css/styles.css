@@ -28,3 +28,10 @@ body{
 }
 
 
+/*COLORPICKERFACIL.HTML*/
+
+.generalColorPickerFacil{ 
+    display: flex;
+    flex-direction: row;
+}
+

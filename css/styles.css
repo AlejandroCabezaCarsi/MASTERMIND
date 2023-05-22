@@ -83,8 +83,8 @@ body{
 }
 
 .circulosMedio{ 
-    width: 2em;
-    height: 2em;
+    width: 7em;
+    height: 7em;
     background-color: red;
     border-radius: 50%;
     ;
@@ -99,4 +99,13 @@ body{
 
 .fondoBotonrojo{ 
     background-color: #ED5565;
+}
+
+/*COLORPICKERFACIL.HTML*/
+
+.generalColorPickerFacil{ 
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
 }
