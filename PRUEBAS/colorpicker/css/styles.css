@@ -1,0 +1,30 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contPrincipal{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor{ 
+    width: 5em;
+    height: 5em;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.espacioColorPicker { 
+    width: 4em;
+    height: 4em;
+    border-radius: 50%;
+    background-color: aqua;
+    margin: 2em;
+}
+
+
