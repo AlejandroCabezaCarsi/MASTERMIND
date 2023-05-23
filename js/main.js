@@ -1,4 +1,4 @@
-let contenedor1 = document.getElementById ('contenedorColorPickerFacil1');
+let contenedor1 = document.getElementById ('contenedorColorPickerFacil1') ?? "#AC92EC";
 let contenedor2 = document.getElementById ('contenedorColorPickerFacil2');
 let contenedor3 = document.getElementById ('contenedorColorPickerFacil3');
 let contenedor4 = document.getElementById ('contenedorColorPickerFacil4');
@@ -61,7 +61,7 @@ colorSiguiente.addEventListener('click', () => {
             arrayColores.push(colorPicker.value)
             contador+=1
 
-            if (arrayColores[0]=== '#000000'){
+            if (arrayColores[0] === '#000000'){
                 arrayColores.pop()
                 arrayColores.push('#AC92EC')
             }

@@ -11,123 +11,66 @@ contenedor3.style.backgroundColor = "#ED5565";
 contenedor4.style.backgroundColor = "#A0D468"; 
 contenedor5.style.backgroundColor = "#5D9CEC"; 
 contenedor6.style.backgroundColor = "#E9573F"; 
-
 let arrayColores = []
-
 let colorAnterior = document.getElementById('colorAnterior'); 
 let colorSiguiente = document.getElementById('colorSiguiente');
-
 const colorPicker = document.querySelector('input');
-
-
 let contador = 0;
-
-
 
 colorPicker.addEventListener('input', () => {
 
-    
-
     switch (contador) {
-        case 0:
-            
+        case 0:           
             contenedor1.style.backgroundColor = colorPicker.value
-
+            arrayColores
             break;
-        case 1:
-            
+        case 1:           
             contenedor2.style.backgroundColor = colorPicker.value
-
             break;
-        case 2:
-            
+        case 2:           
             contenedor3.style.backgroundColor = colorPicker.value
-
             break;
         case 3:
-            
             contenedor4.style.backgroundColor = colorPicker.value
-
             break;
         case 4:
-            
             contenedor5.style.backgroundColor = colorPicker.value
-
             break;
-        case 5:
-            
+        case 5:           
             contenedor6.style.backgroundColor = colorPicker.value
-
-            break;
-    
-        
-    }
-
-})
+            break;     
+}})
 
 colorSiguiente.addEventListener('click', () => {
 
-
-
     switch (contador) {
+
         case 0:
 
             arrayColores.push(colorPicker.value)
             contador+=1
             contenedor1.style.backgroundColor = colorPicker.value
 
-
-            if (arrayColores[0]=== '#000000'){
-                arrayColores.pop()
-                arrayColores.push('#AC92EC')
-            }
-            console.log(arrayColores)
-            console.log(contador)
-        
             break;
         case 1:
 
             arrayColores.push(colorPicker.value)
             contador++
             contenedor2.style.backgroundColor = colorPicker.value
-            if (arrayColores[1]=== '#000000'){
-                arrayColores.pop()
-                arrayColores.push('#F6BB42')
-            }
-            console.log(arrayColores)
-            console.log(contador)
-        
-        
+
             break;
         case 2:
-
             arrayColores.push(colorPicker.value)
             contador+=1
             contenedor3.style.backgroundColor = colorPicker.value
 
-            if (arrayColores[2]=== '#000000'){
-                arrayColores.pop()
-                arrayColores.push('#ED5565')
-            }
-            console.log(arrayColores)
-            console.log(contador)
-        
-        
             break;
         case 3:
 
             arrayColores.push(colorPicker.value)
             contador+=1
             contenedor4.style.backgroundColor = colorPicker.value
-
-            if (arrayColores[3]=== '#000000'){
-                arrayColores.pop()
-                arrayColores.push('#A0D468')
-            } 
-            console.log(arrayColores)
-            console.log(contador)
-        
-        
+            
             break;
         case 4:
 
@@ -135,14 +78,6 @@ colorSiguiente.addEventListener('click', () => {
             contador+=1
             contenedor5.style.backgroundColor = colorPicker.value
 
-            if (arrayColores[4]=== '#000000'){
-                arrayColores.pop()
-                arrayColores.push('#5D9CEC')
-            } 
-            console.log(arrayColores)
-            console.log(contador)
-        
-        
             break;
         case 5:
 
@@ -150,20 +85,8 @@ colorSiguiente.addEventListener('click', () => {
             contador+=1
             contenedor6.style.backgroundColor = colorPicker.value
 
-            if (arrayColores[5]=== '#000000'){
-                arrayColores.pop()
-                arrayColores.push('#E9573F')
-            } 
-            console.log(arrayColores)
-            console.log(contador)
-        
-        
             break;
-
-    }
-
-
-})
+}})
 
 colorAnterior.addEventListener('click', () => { 
     switch (contador) {
@@ -173,8 +96,7 @@ colorAnterior.addEventListener('click', () => {
         contador--
         arrayColores.pop()
         contenedor6.style.background = '#E9573F';
-        console.log(arrayColores)
-            
+    
             break;
 
         case 5:
@@ -182,8 +104,7 @@ colorAnterior.addEventListener('click', () => {
         contador--
         arrayColores.pop()
         contenedor5.style.background = '#5D9CEC';
-        console.log(arrayColores)
-            
+        
             break;
 
         case 4:
@@ -191,36 +112,26 @@ colorAnterior.addEventListener('click', () => {
         contador--
         arrayColores.pop()
         contenedor4.style.background = '#A0D468';
-        console.log(arrayColores)
-            
+   
             break;
         case 3:
 
         contador--
         arrayColores.pop()
         contenedor3.style.background = '#ED5565';
-        console.log(arrayColores)
-            
+  
             break;
         case 2:
 
         contador--
         arrayColores.pop()
         contenedor2.style.background = '#F6BB42';
-        console.log(arrayColores)
-            
+   
             break;
         case 1:
-
         contador--
         arrayColores.pop()
         contenedor1.style.background = '#AC92EC';
-        console.log(arrayColores)
-            
             break;
-    
-        default:
-            break;
-    }
-})
+}})
 
