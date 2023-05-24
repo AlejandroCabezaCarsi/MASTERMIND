@@ -11,10 +11,10 @@ const contenedor4 = document.getElementById('posicion4');
 
 const botonCheck = document.getElementById('botonComprobar');
 
-const fichaComprobacion1 = document.getElementById('fichaComprobacion1');
-const fichaComprobacion2 = document.getElementById('fichaComprobacion2');
-const fichaComprobacion3 = document.getElementById('fichaComprobacion3');
-const fichaComprobacion4 = document.getElementById('fichaComprobacion4');
+// const fichaComprobacion1 = document.getElementById('fichaComprobacion1');
+// const fichaComprobacion2 = document.getElementById('fichaComprobacion2');
+// const fichaComprobacion3 = document.getElementById('fichaComprobacion3');
+// const fichaComprobacion4 = document.getElementById('fichaComprobacion4');
 
 contenedor1.style.backgroundColor = '#000000';
 contenedor2.style.backgroundColor = '#000000';
@@ -36,14 +36,29 @@ const Ganador = (arrayA,arrayB) => {
 
     if (arrayA.join("")===arrayB.join("")){
         alert('ENHORABUENA HAS GANADO')
-
-    }else(
-        
-        alert('HAS PERDIDO')
-            
-        );
-    )
+    }
 }
+
+const Comprobador = (arrayA,arrayB) => { 
+        
+    for ( i=0 ; i<4; i++){ 
+
+
+        
+        if (arrayA.includes(arrayB[i])){ 
+            let fichaComprobacion = document.getElementById("fichaComprobacion" + i);
+            console.log(fichaComprobacion)
+            fichaComprobacion.style.background = '#FFFFFF'
+            console.log(combinacionUsuario)
+        }
+
+    }
+
+}
+
+
+
+
 
 
 
@@ -102,14 +117,23 @@ botonCheck.addEventListener('click', () => {
         arrayColores[contador4]
     )
 
-    console.log('Combinacion usuario: ', combinacionUsuario)
+    
 
     if(confirmarClick1 == false || confirmarClick2 == false || confirmarClick3 == false || confirmarClick4 == false){
+        
+        for (i = 0; i<4; i++){
+            combinacionUsuario.shift()
+        }
+        console.log('combinacion usuario: ' + combinacionUsuario)
         alert ('TIENES QUE TENER CUATRO COLORES EN LA COMBINACION')    
         return
         }
 
-    Ganador(combinacionGanadora,combinacionUsuario)
+    Ganador(combinacionGanadora,combinacionUsuario);
+
+    Comprobador(combinacionGanadora,combinacionUsuario);
+
+    
 })
 
 // FICHAS COMPROBACION POSICIONES
