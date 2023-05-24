@@ -26,6 +26,11 @@ let contador2 = 3
 let contador3 = 3
 let contador4 = 3
 
+let confirmarClick1 = false;
+let confirmarClick2 = false;
+let confirmarClick3 = false;
+let confirmarClick4 = false;
+
 
 const comprobacion = (arrayA,arrayB) => { 
 
@@ -33,7 +38,7 @@ const comprobacion = (arrayA,arrayB) => {
         alert('ENHORABUENA HAS GANADO')
 
     }else(
-        alert('SIGUE INTENTANDOLO')
+        alert('HAS PERDIDO')
     )
 }
 
@@ -48,9 +53,7 @@ const comprobacion = (arrayA,arrayB) => {
 
 //     combinacionGanadora.push(arrayColores[posicionRandom]); 
 
-    
-
-    
+   
 
 // }
 
@@ -64,21 +67,25 @@ contenedor1.addEventListener('click', () => {
     contador1++;
     if (contador1 > 3){contador1 = 0;};
     contenedor1.style.backgroundColor = arrayColores[contador1];
+    confirmarClick1 = true; 
 })
 contenedor2.addEventListener('click', () => {   
     contador2++;
     if (contador2 > 3){contador2=0;};
     contenedor2.style.backgroundColor = arrayColores[contador2];
+    confirmarClick2 = true
 })
 contenedor3.addEventListener('click', () => {
     contador3++;
     if (contador3 > 3){contador3=0;};
     contenedor3.style.backgroundColor = arrayColores[contador3];
+    confirmarClick3 = true;
 })
 contenedor4.addEventListener('click', () => {
     contador4++;
     if (contador4 > 3){contador4=0;};
     contenedor4.style.backgroundColor = arrayColores[contador4];
+    confirmarClick4 = true;
 })
 
 //BOTON COMPROBAR
@@ -93,6 +100,11 @@ botonCheck.addEventListener('click', () => {
     )
 
     console.log('Combinacion usuario: ', combinacionUsuario)
+
+    if(confirmarClick1 == false || confirmarClick2 == false || confirmarClick3 == false || confirmarClick4 == false){
+        alert ('TIENES QUE TENER CUATRO COLORES EN LA COMBINACION')    
+        return
+        }
 
     comprobacion(combinacionGanadora,combinacionUsuario)
 })
