@@ -47,9 +47,15 @@ const Comprobador = (arrayA,arrayB) => {
         
         if (arrayA.includes(arrayB[i])){ 
             let fichaComprobacion = document.getElementById("fichaComprobacion" + i);
-            console.log(fichaComprobacion)
+            
             fichaComprobacion.style.background = '#FFFFFF'
-            console.log(combinacionUsuario)
+            
+        }
+
+        if(arrayA[i]===arrayB[i]){
+            
+            let fichaComprobacion = document.getElementById("fichaComprobacion" + i);
+            fichaComprobacion.style.backgroundColor = '#FF0000'
         }
 
     }
