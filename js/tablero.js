@@ -32,15 +32,20 @@ let confirmarClick3 = false;
 let confirmarClick4 = false;
 
 
-const comprobacion = (arrayA,arrayB) => { 
+const Ganador = (arrayA,arrayB) => { 
 
     if (arrayA.join("")===arrayB.join("")){
         alert('ENHORABUENA HAS GANADO')
 
     }else(
+        
         alert('HAS PERDIDO')
+            
+        );
     )
 }
+
+
 
 
 
@@ -60,8 +65,6 @@ const comprobacion = (arrayA,arrayB) => {
 console.log('Combinacion ganadora: ', combinacionGanadora)
 
 //CAMBIO DE COLOR EN LOS DIVS AL HACER CLICK
-
-
 
 contenedor1.addEventListener('click', () => {
     contador1++;
@@ -106,7 +109,7 @@ botonCheck.addEventListener('click', () => {
         return
         }
 
-    comprobacion(combinacionGanadora,combinacionUsuario)
+    Ganador(combinacionGanadora,combinacionUsuario)
 })
 
 // FICHAS COMPROBACION POSICIONES
