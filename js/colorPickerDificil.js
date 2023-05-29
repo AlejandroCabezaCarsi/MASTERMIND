@@ -11,7 +11,9 @@ contenedor3.style.backgroundColor = "#ED5565";
 contenedor4.style.backgroundColor = "#A0D468"; 
 contenedor5.style.backgroundColor = "#5D9CEC"; 
 contenedor6.style.backgroundColor = "#E9573F"; 
+
 let arrayColores = []
+
 let colorAnterior = document.getElementById('colorAnterior'); 
 let colorSiguiente = document.getElementById('colorSiguiente');
 const colorPicker = document.querySelector('input');

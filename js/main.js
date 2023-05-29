@@ -1,4 +1,4 @@
-let contenedor1 = document.getElementById ('contenedorColorPickerFacil1') ?? "#AC92EC";
+let contenedor1 = document.getElementById ('contenedorColorPickerFacil1');
 let contenedor2 = document.getElementById ('contenedorColorPickerFacil2');
 let contenedor3 = document.getElementById ('contenedorColorPickerFacil3');
 let contenedor4 = document.getElementById ('contenedorColorPickerFacil4');
@@ -13,147 +13,191 @@ let arrayColores = []
 let colorAnterior = document.getElementById('colorAnterior'); 
 let colorSiguiente = document.getElementById('colorSiguiente');
 
-const colorPicker = document.querySelector('input');
+// const colorPicker = document.querySelector('input');
 
 
 let contador = 0;
 
 
+// let objetivo = document.getElementById('objetivo'); 
 
-colorPicker.addEventListener('input', () => {
+// const pintaColorPicker = () => {
+
+//     objetivo.innerHTML = '<div id="colorPicker" type = "color"> </div>;'
+
+// }
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    let objetivo = document.getElementById('objetivo');
+  
+    const pintaColorPicker = () => {
+      objetivo.innerHTML = '<input id="colorPicker" type="color">';
+    };
+  });
+  
+
+// FUNCIONES
+
+
+
+
+    
+const cambiaColor = () => {
+
+style.backgroundColor = input.value
+
+
+}
+
+const GuardaDificultad = () => { 
+
+    sessionStorage.setItem("Dificultad Facil ", 5); 
+
+}
+
+const GuardaColores = () => {
+
+    sessionStorage.setItem("Array Colores", JSON.stringify(arrayColores));
+
+}
+    
+
+
+
+// colorPicker.addEventListener('input', () => {
 
     
 
-    switch (contador) {
-        case 0:
+//     switch (contador) {
+//         case 0:
             
-            contenedor1.style.backgroundColor = colorPicker.value
+//             contenedor1.style.backgroundColor = colorPicker.value
 
-            break;
-        case 1:
+//             break;
+//         case 1:
             
-            contenedor2.style.backgroundColor = colorPicker.value
+//             contenedor2.style.backgroundColor = colorPicker.value
 
-            break;
-        case 2:
+//             break;
+//         case 2:
             
-            contenedor3.style.backgroundColor = colorPicker.value
+//             contenedor3.style.backgroundColor = colorPicker.value
 
-            break;
-        case 3:
+//             break;
+//         case 3:
             
-            contenedor4.style.backgroundColor = colorPicker.value
+//             contenedor4.style.backgroundColor = colorPicker.value
 
-            break;
+//             break;
     
         
-    }
+//     }
 
-})
+// })
 
-colorSiguiente.addEventListener('click', () => {
+// colorSiguiente.addEventListener('click', () => {
 
 
 
-    switch (contador) {
-        case 0:
+//     switch (contador) {
+//         case 0:
 
-            arrayColores.push(colorPicker.value)
-            contador+=1
+//             arrayColores.push(colorPicker.value)
+//             contador+=1
 
-            if (arrayColores[0] === '#000000'){
-                arrayColores.pop()
-                arrayColores.push('#AC92EC')
-            }
-            console.log(arrayColores)
-            console.log(contador)
+//             if (arrayColores[0] === '#000000'){
+//                 arrayColores.pop()
+//                 arrayColores.push('#AC92EC')
+//             }
+//             console.log(arrayColores)
+//             console.log(contador)
         
-            break;
-        case 1:
+//             break;
+//         case 1:
 
-            arrayColores.push(colorPicker.value)
-            contador++
-            if (arrayColores[1]=== '#000000'){
-                arrayColores.pop()
-                arrayColores.push('#F6BB42')
-            }
-            console.log(arrayColores)
-            console.log(contador)
-        
-        
-            break;
-        case 2:
-
-            arrayColores.push(colorPicker.value)
-            contador+=1
-            if (arrayColores[2]=== '#000000'){
-                arrayColores.pop()
-                arrayColores.push('#ED5565')
-            }
-            console.log(arrayColores)
-            console.log(contador)
+//             arrayColores.push(colorPicker.value)
+//             contador++
+//             if (arrayColores[1]=== '#000000'){
+//                 arrayColores.pop()
+//                 arrayColores.push('#F6BB42')
+//             }
+//             console.log(arrayColores)
+//             console.log(contador)
         
         
-            break;
-        case 3:
+//             break;
+//         case 2:
 
-            arrayColores.push(colorPicker.value)
-            contador+=1
-            if (arrayColores[3]=== '#000000'){
-                arrayColores.pop()
-                arrayColores.push('#A0D468')
-            } 
-            console.log(arrayColores)
-            console.log(contador)
+//             arrayColores.push(colorPicker.value)
+//             contador+=1
+//             if (arrayColores[2]=== '#000000'){
+//                 arrayColores.pop()
+//                 arrayColores.push('#ED5565')
+//             }
+//             console.log(arrayColores)
+//             console.log(contador)
         
         
-            break;
+//             break;
+//         case 3:
 
-    }
+//             arrayColores.push(colorPicker.value)
+//             contador+=1
+//             if (arrayColores[3]=== '#000000'){
+//                 arrayColores.pop()
+//                 arrayColores.push('#A0D468')
+//             } 
+//             console.log(arrayColores)
+//             console.log(contador)
+        
+        
+//             break;
+
+//     }
 
 
-})
+// })
 
-colorAnterior.addEventListener('click', () => { 
-    switch (contador) {
-        case 4:
+// colorAnterior.addEventListener('click', () => {
+//     switch (contador) {
+//         case 4:
 
-        contador--
-        arrayColores.pop()
-        contenedor4.style.background = '#A0D468';
-        console.log(arrayColores)
+//         contador--
+//         arrayColores.pop()
+//         contenedor4.style.background = '#A0D468';
+//         console.log(arrayColores)
             
-            break;
-        case 3:
+//             break;
+//         case 3:
 
-        contador--
-        arrayColores.pop()
-        contenedor3.style.background = '#ED5565';
-        console.log(arrayColores)
+//         contador--
+//         arrayColores.pop()
+//         contenedor3.style.background = '#ED5565';
+//         console.log(arrayColores)
             
-            break;
-        case 2:
+//             break;
+//         case 2:
 
-        contador--
-        arrayColores.pop()
-        contenedor2.style.background = '#F6BB42';
-        console.log(arrayColores)
+//         contador--
+//         arrayColores.pop()
+//         contenedor2.style.background = '#F6BB42';
+//         console.log(arrayColores)
             
-            break;
-        case 1:
+//             break;
+//         case 1:
 
-        contador--
-        arrayColores.pop()
-        contenedor1.style.background = '#AC92EC';
-        console.log(arrayColores)
+//         contador--
+//         arrayColores.pop()
+//         contenedor1.style.background = '#AC92EC';
+//         console.log(arrayColores)
             
-            break;
+//             break;
     
-        default:
-            break;
-    }
-})
-
+//         default:
+//             break;
+//     }
+// })
 
 
 

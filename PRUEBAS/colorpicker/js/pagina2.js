@@ -33,3 +33,41 @@
 //     console.log("sigue intentandolo");
 // }
 
+
+//EL PRIMERO FUNCIONAAAAA
+
+// let colorPicker = document.getElementById('colorPickerFacil1'); 
+
+// let contenedor = document.getElementById('contenedorColorPickerFacil1'); 
+
+// colorPicker.addEventListener('input', ()=>{
+//     contenedor.style.backgroundColor = colorPicker.value
+// })
+
+//-----------------------------------------------------
+
+// let colorPicker = document.getElementById('colorPickerFacil1');
+// let contenedor = document.getElementById('contenedorColorPickerFacil1');
+
+// contenedor.addEventListener('click', () => {
+//   colorPicker.click();
+// });
+
+// colorPicker.addEventListener('input', () => {
+//   contenedor.style.backgroundColor = colorPicker.value;
+// });
+
+//------------------------------------------------------
+
+let contenedor = document.getElementById('contenedorColorPickerFacil1');
+
+contenedor.addEventListener('click', function() {
+  let colorPicker = document.getElementById('colorPickerFacil1');
+  colorPicker.click();
+});
+
+let colorPicker = document.getElementById('colorPickerFacil1');
+colorPicker.addEventListener('input', function() {
+  contenedor.style.backgroundColor = colorPicker.value;
+});
+

@@ -1,35 +1,34 @@
-//Me traigo el array de colores del session storage
+// Me traigo el array de colores del session storage
 
-const arrayColores = ["#80E5EB","#16F35D","#D5F507","#F50707"];
+const arrayColores = ["#80E5EB","#16F35D","#D5F507","#F50707"]; /**/
 const combinacionGanadora = ["#80E5EB","#16F35D","#D5F507","#F50707"];
 const combinacionUsuario = []; 
 
-const contenedor1 = document.getElementById('posicion1');
-const contenedor2 = document.getElementById('posicion2');
-const contenedor3 = document.getElementById('posicion3');
-const contenedor4 = document.getElementById('posicion4');
+let contadorFilas = 1; 
 
-const botonCheck = document.getElementById('botonComprobar');
+// const contenedor1 = document.getElementById(`posicion${contadorFilas}1`);
+// const contenedor2 = document.getElementById(`posicion${contadorFilas}2`);
+// const contenedor3 = document.getElementById(`posicion${contadorFilas}3`);
+// const contenedor4 = document.getElementById(`posicion${contadorFilas}4`);
+    let contenedor1; 
+    let contenedor2; 
+    let contenedor3; 
+    let contenedor4; 
+    let botonCheck;
 
-// const fichaComprobacion1 = document.getElementById('fichaComprobacion1');
-// const fichaComprobacion2 = document.getElementById('fichaComprobacion2');
-// const fichaComprobacion3 = document.getElementById('fichaComprobacion3');
-// const fichaComprobacion4 = document.getElementById('fichaComprobacion4');
 
-contenedor1.style.backgroundColor = '#000000';
-contenedor2.style.backgroundColor = '#000000';
-contenedor3.style.backgroundColor = '#000000';
-contenedor4.style.backgroundColor = '#000000';
 
-let contador1 = 3
-let contador2 = 3
-let contador3 = 3
-let contador4 = 3
+
+let contador1 = 3;
+let contador2 = 3;
+let contador3 = 3;
+let contador4 = 3;
 
 let confirmarClick1 = false;
 let confirmarClick2 = false;
 let confirmarClick3 = false;
 let confirmarClick4 = false;
+
 
 
 const Ganador = (arrayA,arrayB) => { 
@@ -42,12 +41,9 @@ const Ganador = (arrayA,arrayB) => {
 const Comprobador = (arrayA,arrayB) => { 
         
     for ( i=0 ; i<4; i++){ 
-
-
         
         if (arrayA.includes(arrayB[i])){ 
             let fichaComprobacion = document.getElementById("fichaComprobacion" + i);
-            
             fichaComprobacion.style.background = '#FFFFFF'
             
         }
@@ -57,35 +53,56 @@ const Comprobador = (arrayA,arrayB) => {
             let fichaComprobacion = document.getElementById("fichaComprobacion" + i);
             fichaComprobacion.style.backgroundColor = '#FF0000'
         }
-
     }
+}
+
+const ActualizaContenedores = () => { 
+
+    contadorFilas++
+
+    contenedor1 = document.getElementById(`posicion${contadorFilas}1`);
+    contenedor2 = document.getElementById(`posicion${contadorFilas}2`);
+    contenedor3 = document.getElementById(`posicion${contadorFilas}3`);
+    contenedor4 = document.getElementById(`posicion${contadorFilas}4`);
+    botonCheck = document.getElementById(`botonComprobar${contadorFilas}1`);
+
+    contenedor1.id = `posicion${contadorFilas}1`;
+    contenedor2.id = `posicion${contadorFilas}2`;
+    contenedor3.id = `posicion${contadorFilas}3`;
+    contenedor4.id = `posicion${contadorFilas}4`;
+    botonCheck.id = `botonComprobar${contadorFilas}1`;
+    
 
 }
 
 
+// //GENERACION ARRAY COMBINACION GANADORA
+
+
+// // for ( i=0; i<4 ; i++){
+
+// //     let posicionRandom = Math.floor(Math.random()*arrayColores.length);
+
+// //     combinacionGanadora.push(arrayColores[posicionRandom]); 
+
+// // }
+
+// console.log('Combinacion ganadora: ', combinacionGanadora)
 
 
 
+// //CAMBIO DE COLOR EN LOS DIVS AL HACER CLICK
 
 
+document.addEventListener('DOMContentLoaded', () =>{
+
+    let contenedor1 = document.getElementById(`posicion${contadorFilas}1`);
+    let contenedor2 = document.getElementById(`posicion${contadorFilas}2`);
+    let contenedor3 = document.getElementById(`posicion${contadorFilas}3`);
+    let contenedor4 = document.getElementById(`posicion${contadorFilas}4`);
+    let botonCheck = document.getElementById(`botonComprobar${contadorFilas}1`);
 
 
-//GENERACION ARRAY COMBINACION GANADORA
-
-
-// for ( i=0; i<4 ; i++){
-
-//     let posicionRandom = Math.floor(Math.random()*arrayColores.length);
-
-//     combinacionGanadora.push(arrayColores[posicionRandom]); 
-
-   
-
-// }
-
-console.log('Combinacion ganadora: ', combinacionGanadora)
-
-//CAMBIO DE COLOR EN LOS DIVS AL HACER CLICK
 
 contenedor1.addEventListener('click', () => {
     contador1++;
@@ -112,37 +129,42 @@ contenedor4.addEventListener('click', () => {
     confirmarClick4 = true;
 })
 
-//BOTON COMPROBAR
+
+
+// //BOTON COMPROBAR
 
 botonCheck.addEventListener('click', () => {
 
-    combinacionUsuario.push(
-        arrayColores[contador1],
-        arrayColores[contador2],
-        arrayColores[contador3],
-        arrayColores[contador4]
-    )
-
-    
-
     if(confirmarClick1 == false || confirmarClick2 == false || confirmarClick3 == false || confirmarClick4 == false){
-        
-        for (i = 0; i<4; i++){
-            combinacionUsuario.shift()
-        }
-        console.log('combinacion usuario: ' + combinacionUsuario)
-        alert ('TIENES QUE TENER CUATRO COLORES EN LA COMBINACION')    
-        return
-        }
 
-    Ganador(combinacionGanadora,combinacionUsuario);
+            console.log('combinacion usuario: ' + combinacionUsuario)
+            alert ('TIENES QUE TENER CUATRO COLORES EN LA COMBINACION')    
+            return;
 
-    Comprobador(combinacionGanadora,combinacionUsuario);
+            }else {
+                
+                combinacionUsuario.push(
+                        arrayColores[contador1],
+                        arrayColores[contador2],
+                        arrayColores[contador3],
+                        arrayColores[contador4])
 
-    
+                        console.log('combinacion usuario: ' + combinacionUsuario)
+                        const filaMovil = document.getElementsByClassName('filaMovil')[contadorFilas - 1];
+                        filaMovil.classList.add('filaInhabilitada');
+                        
+            }
+
+
+Ganador(combinacionGanadora,combinacionUsuario);
+
+Comprobador(combinacionGanadora,combinacionUsuario);
+
+ActualizaContenedores(); 
+
+console.log(contadorFilas)
+console.log(contenedor1.id,contenedor2.id)
+
 })
 
-// FICHAS COMPROBACION POSICIONES
-
-
-
+});
