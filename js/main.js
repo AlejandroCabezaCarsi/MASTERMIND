@@ -27,15 +27,8 @@ let contador = 0;
 
 // }
 
-
-
-
 // FUNCIONES
-
-
-
-
-    
+  
 const cambiaColor = () => {
 
 style.backgroundColor = input.value
@@ -43,9 +36,10 @@ style.backgroundColor = input.value
 
 }
 
-const GuardaDificultad = () => { 
+const GuardaDificultad = (dificultad) => { 
 
-    sessionStorage.setItem("Dificultad Facil ", 5); 
+    sessionStorage.setItem('Dificultad', dificultad); 
+   
 
 }
 

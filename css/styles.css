@@ -187,6 +187,41 @@ background-color: green;
 }
 
 .fila{
+    width: 16em;
     display: flex;
     flex-direction: row;
+}
+
+.numeroFila {
+    height: 3em;
+    width: 3git em;
+    background-color: #4FC1E9;
+}
+
+.filaDinamica{
+    width: 16em;
+    height: 3em;
+    background-color: blue;
+}
+.contenedorCirculos{
+    width: 12em;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.columnaComprobacion{
+    width: 1.1em;
+    height: 3em;
+    background-color: #A0D468;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.circulosComprobacion{
+    background-color: black;
+    height: 1em;
+    width: 1em;
 }

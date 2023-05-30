@@ -3,8 +3,9 @@
 const arrayColores = ["#80E5EB","#16F35D","#D5F507","#F50707"]; /**/
 const combinacionGanadora = ["#80E5EB","#16F35D","#D5F507","#F50707"];
 const combinacionUsuario = []; 
+const arrayFichasComprobacion = []
 
-let contadorFilas = 0; 
+let contadorFilas = 1; 
 
     let contenedor1 = document.getElementById(`posicion1`);
     let contenedor2 = document.getElementById(`posicion2`);
@@ -37,6 +38,7 @@ const Comprobador = (arrayA,arrayB) => {
         if (arrayA.includes(arrayB[i])){ 
             let fichaComprobacion = document.getElementById("fichaComprobacion" + i);
             fichaComprobacion.style.background = '#FFFFFF'
+            arrayFichasComprobacion[i] = '#FFFFFF'; 
             
         }
 
@@ -44,6 +46,7 @@ const Comprobador = (arrayA,arrayB) => {
             
             let fichaComprobacion = document.getElementById("fichaComprobacion" + i);
             fichaComprobacion.style.backgroundColor = '#FF0000'
+            arrayFichasComprobacion[i] = 'FF0000';
         }
     }
 }
@@ -57,12 +60,58 @@ const CreaFila = () => {
     fila.id = `fila${contadorFilas}`
     fila.className ='fila';
 
+    const numeroFila = document.createElement('div'); 
+    numeroFila.className = 'numeroFila'
+    numeroFila.innerHTML = `${contadorFilas}`
+    fila.appendChild(numeroFila)
+
+
+    const contenedorCirculos = document.createElement('div'); 
+    contenedorCirculos.className = 'contenedorCirculos'; 
+    fila.appendChild(contenedorCirculos)
+
     for (i = 0; i<4 ; i++){ 
         const div = document.createElement('div'); 
         div.className = "circulosEleccionUsuario"
         div.style.backgroundColor = combinacionUsuario[i]; 
-        fila.appendChild(div)
+        contenedorCirculos.appendChild(div)
     }
+
+    const contenedorComprobacion = document.createElement('div'); 
+    contenedorComprobacion.className = 'comprobacionCombinacion d-flex'
+    fila.appendChild(contenedorComprobacion)
+
+    
+    const columnaComprobacion1 = document.createElement('div'); 
+    columnaComprobacion1.className = 'columnaComprobacion'; 
+    contenedorComprobacion.appendChild(columnaComprobacion1)
+
+
+    const columnaComprobacion2 = document.createElement('div'); 
+    columnaComprobacion2.className = 'columnaComprobacion'; 
+    contenedorComprobacion.appendChild(columnaComprobacion2)
+
+
+
+    for (i=0; i < 2; i++){
+      const circulosComprobacion1 = document.createElement('div');
+      circulosComprobacion1.className = "circulosComprobacion";
+      circulosComprobacion1.style.backgroundColor = arrayFichasComprobacion[i];
+      columnaComprobacion1.appendChild(circulosComprobacion1);
+    
+       
+    };
+
+    for (i=2; i < 4; i++){
+        const circulosComprobacion2 = document.createElement('div'); 
+        circulosComprobacion2.className = "circulosComprobacion";
+        circulosComprobacion2.style.backgroundColor = arrayFichasComprobacion[i];
+        columnaComprobacion2.appendChild(circulosComprobacion2);
+    }
+    
+
+    
+
 
     filasDinamicas.appendChild(fila)
 
@@ -163,6 +212,11 @@ contador1 = 3;
 contador2 = 3;
 contador3 = 3;
 contador4 = 3;
+
+confirmarClick1 = false
+confirmarClick2 = false
+confirmarClick3 = false
+confirmarClick4 = false
 
 
 })
