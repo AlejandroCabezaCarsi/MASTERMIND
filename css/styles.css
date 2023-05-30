@@ -120,8 +120,8 @@ body{
     
 }
 
-.filaMovil{
-    width: 15em;
+.filaFija{
+    width: 16em;
     height: 3em;
     background-color: blue;
 }
@@ -177,4 +177,16 @@ background-color: green;
 
     opacity: 0.5;
 
+}
+
+#filasDinamicas {
+
+    display: flex;
+    flex-direction: row;
+
+}
+
+.fila{
+    display: flex;
+    flex-direction: row;
 }

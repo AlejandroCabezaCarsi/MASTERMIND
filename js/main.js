@@ -28,14 +28,7 @@ let contador = 0;
 // }
 
 
-document.addEventListener('DOMContentLoaded', () => {
-    let objetivo = document.getElementById('objetivo');
-  
-    const pintaColorPicker = () => {
-      objetivo.innerHTML = '<input id="colorPicker" type="color">';
-    };
-  });
-  
+
 
 // FUNCIONES
 
