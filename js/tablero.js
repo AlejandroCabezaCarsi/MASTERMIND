@@ -219,6 +219,17 @@ confirmarClick3 = false
 confirmarClick4 = false
 
 
+
+for (i=0; i<4; i++){
+    arrayFichasComprobacion[i] ='#000000'
+    let fichaComprobacion = document.getElementById("fichaComprobacion" + i);
+    fichaComprobacion.style.background = '#000000'
+
+}
+
+
+
+
 })
 
 

@@ -246,8 +246,28 @@ background-color: green;
     background-color: yellow;
 }
 
+.circulosEleccionUsuarioD{
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+}
+
 .comprobacionCombinacionD{
     width: 2.25;
     height: 3em;
     background-color: orange;
+}
+.columnaComprobacionD{
+    width: 1.13em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.circulosComprobacionD{
+    width: 1em;
+    height: 1em;
+    background-color: red;
+    border-radius: 50%;
 }
