@@ -186,28 +186,24 @@ background-color: green;
 
 }
 
-.fila{
+.filaD{
     width: 16em;
+    height: 3em;
     display: flex;
     flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: black;
 }
 
-.numeroFila {
-    height: 3em;
-    width: 3git em;
-    background-color: #4FC1E9;
-}
+
+
+
 
 .filaDinamica{
     width: 16em;
     height: 3em;
     background-color: blue;
-}
-.contenedorCirculos{
-    width: 12em;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
 }
 
 .columnaComprobacion{
@@ -224,4 +220,34 @@ background-color: green;
     background-color: black;
     height: 1em;
     width: 1em;
+}
+
+
+
+
+
+
+
+.numeroFilaD {
+    height: 3em;
+    width: 3em;
+    background-color: #4FC1E9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedorCirculosD{
+    width: 10.75em;
+    height: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: yellow;
+}
+
+.comprobacionCombinacionD{
+    width: 2.25;
+    height: 3em;
+    background-color: orange;
 }

@@ -58,44 +58,44 @@ const CreaFila = () => {
 
     const fila = document.createElement('div'); 
     fila.id = `fila${contadorFilas}`
-    fila.className ='fila';
+    fila.className ='filaD';
 
     const numeroFila = document.createElement('div'); 
-    numeroFila.className = 'numeroFila'
+    numeroFila.className = 'numeroFilaD'
     numeroFila.innerHTML = `${contadorFilas}`
     fila.appendChild(numeroFila)
 
 
     const contenedorCirculos = document.createElement('div'); 
-    contenedorCirculos.className = 'contenedorCirculos'; 
+    contenedorCirculos.className = 'contenedorCirculosD'; 
     fila.appendChild(contenedorCirculos)
 
     for (i = 0; i<4 ; i++){ 
         const div = document.createElement('div'); 
-        div.className = "circulosEleccionUsuario"
+        div.className = "circulosEleccionUsuarioD"
         div.style.backgroundColor = combinacionUsuario[i]; 
         contenedorCirculos.appendChild(div)
     }
 
     const contenedorComprobacion = document.createElement('div'); 
-    contenedorComprobacion.className = 'comprobacionCombinacion d-flex'
+    contenedorComprobacion.className = 'comprobacionCombinacionD d-flex'
     fila.appendChild(contenedorComprobacion)
 
     
     const columnaComprobacion1 = document.createElement('div'); 
-    columnaComprobacion1.className = 'columnaComprobacion'; 
+    columnaComprobacion1.className = 'columnaComprobacionD'; 
     contenedorComprobacion.appendChild(columnaComprobacion1)
 
 
     const columnaComprobacion2 = document.createElement('div'); 
-    columnaComprobacion2.className = 'columnaComprobacion'; 
+    columnaComprobacion2.className = 'columnaComprobacionD'; 
     contenedorComprobacion.appendChild(columnaComprobacion2)
 
 
 
     for (i=0; i < 2; i++){
       const circulosComprobacion1 = document.createElement('div');
-      circulosComprobacion1.className = "circulosComprobacion";
+      circulosComprobacion1.className = "circulosComprobacionD";
       circulosComprobacion1.style.backgroundColor = arrayFichasComprobacion[i];
       columnaComprobacion1.appendChild(circulosComprobacion1);
     
@@ -104,7 +104,7 @@ const CreaFila = () => {
 
     for (i=2; i < 4; i++){
         const circulosComprobacion2 = document.createElement('div'); 
-        circulosComprobacion2.className = "circulosComprobacion";
+        circulosComprobacion2.className = "circulosComprobacionD";
         circulosComprobacion2.style.backgroundColor = arrayFichasComprobacion[i];
         columnaComprobacion2.appendChild(circulosComprobacion2);
     }

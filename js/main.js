@@ -1,22 +1,22 @@
-let contenedor1 = document.getElementById ('contenedorColorPickerFacil1');
-let contenedor2 = document.getElementById ('contenedorColorPickerFacil2');
-let contenedor3 = document.getElementById ('contenedorColorPickerFacil3');
-let contenedor4 = document.getElementById ('contenedorColorPickerFacil4');
+// let contenedor1 = document.getElementById ('contenedorColorPickerFacil1');
+// let contenedor2 = document.getElementById ('contenedorColorPickerFacil2');
+// let contenedor3 = document.getElementById ('contenedorColorPickerFacil3');
+// let contenedor4 = document.getElementById ('contenedorColorPickerFacil4');
 
-contenedor1.style.backgroundColor = "#AC92EC"; 
-contenedor2.style.backgroundColor = "#F6BB42"; 
-contenedor3.style.backgroundColor = "#ED5565"; 
-contenedor4.style.backgroundColor = "#A0D468"; 
+// contenedor1.style.backgroundColor = "#AC92EC"; 
+// contenedor2.style.backgroundColor = "#F6BB42"; 
+// contenedor3.style.backgroundColor = "#ED5565"; 
+// contenedor4.style.backgroundColor = "#A0D468"; 
 
-let arrayColores = []
+// let arrayColores = []
 
-let colorAnterior = document.getElementById('colorAnterior'); 
-let colorSiguiente = document.getElementById('colorSiguiente');
+// let colorAnterior = document.getElementById('colorAnterior'); 
+// let colorSiguiente = document.getElementById('colorSiguiente');
 
 // const colorPicker = document.querySelector('input');
 
 
-let contador = 0;
+// let contador = 0;
 
 
 // let objetivo = document.getElementById('objetivo'); 
@@ -36,12 +36,6 @@ style.backgroundColor = input.value
 
 }
 
-const GuardaDificultad = (dificultad) => { 
-
-    sessionStorage.setItem('Dificultad', dificultad); 
-   
-
-}
 
 const GuardaColores = () => {
 
