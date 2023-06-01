@@ -23,35 +23,37 @@ body{
     align-items: center;
 }
 
-.letraM { 
+.colorVerde { 
     color: #A0D468;
 }
-.letraA { 
+.colorRojo { 
     color: #ED5565;
 }
-.letraS { 
+.colorAzul { 
     color: #4FC1E9;
 }
-.letraT { 
+.colorRosa { 
     color: #ec87c0;
 }
-.letraE { 
+.colorLavanda { 
     color: #AC92EC;
 }
-.letraR { 
+.colorAmarillo { 
     color: #f6bb42;
 }
-.letraI { 
+.colorSalmon { 
     color: #fc6e51;
 }
-.letraN { 
+.colorAzulOscuro { 
     color: #5D9CEC;
 }
-.letraD { 
+.colorRosaOscuro { 
     color: #D770AD;
 }
 
-/* DIFICULTAD */
+
+
+/* SELECTOR DIFICULTAD */
 
 .estrellaAmarilla{
     width: 3em;
@@ -101,14 +103,6 @@ body{
     background-color: #ED5565;
 }
 
-/*COLORPICKERFACIL.HTML*/
-
-.generalColorPickerFacil{ 
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
-    height: 100vh;
-}
 
 /*TABLERO DE JEUGO */
 
@@ -141,8 +135,6 @@ body{
     width: 3em;
     height: 1.5em;
 }
-
-
 
 .circulosEleccion{
 width: 16em ;
@@ -196,10 +188,6 @@ background-color: green;
     background-color: black;
 }
 
-
-
-
-
 .filaDinamica{
     width: 16em;
     height: 3em;
@@ -221,12 +209,6 @@ background-color: green;
     height: 1em;
     width: 1em;
 }
-
-
-
-
-
-
 
 .numeroFilaD {
     height: 3em;
@@ -326,5 +308,5 @@ background-color: green;
   .botonJugar{
     width: 5em;
     height: 3em;
-    background-color: red;
+
   }
