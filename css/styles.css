@@ -272,13 +272,6 @@ background-color: green;
     flex-direction: column;
 }
 
-.contenidoColorPicker{
-    width: 100vw;
-    height: 50em;
-    background-color: white;
-}
-
-
 .filaColorPicker{
     height: 5em;
     width: 30em;
@@ -289,9 +282,8 @@ background-color: green;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    width: 100px;
-    height: 100px;
-    background-color: #AC92EC;
+    width: 6em;
+    height: 6em;
     border: solid #f6bb42 0.2em;
     cursor: pointer;
     border-radius: 1em;
@@ -300,6 +292,7 @@ background-color: green;
     border-radius: 15px;
     border: none;
   }
+
   #colorPickerD::-moz-color-swatch {
     border-radius: 15px;
     border: none;
@@ -308,5 +301,5 @@ background-color: green;
   .botonJugar{
     width: 5em;
     height: 3em;
-
+    text-decoration: none;
   }

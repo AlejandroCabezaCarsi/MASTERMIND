@@ -31,7 +31,7 @@ const EligeColores = () => {
             const circulosEleccion = document.createElement('div');
             circulosEleccion.className = 'circulosMedio m-5';
             circulosEleccion.id = 'circulosEleccion' + i;
-            circulosEleccion.style.backgroundColor = 'blue';
+            circulosEleccion.style.backgroundColor = arrayColoresPredefinidos[i];
             circulosEleccion.style.border = 'solid white 0.2em';
             circulosEleccion.onclick = () => {
                 const colorPicker = document.getElementById('colorPickerD');
@@ -49,7 +49,7 @@ const EligeColores = () => {
             const circulosEleccion = document.createElement('div');
             circulosEleccion.className = 'circulosMedio m-5';
             circulosEleccion.id = 'circulosEleccion' + i;
-            circulosEleccion.style.backgroundColor = 'blue';
+            circulosEleccion.style.backgroundColor = arrayColoresPredefinidos[i];;
             circulosEleccion.style.border = 'solid white 0.2em';
             circulosEleccion.onclick = () => {
                 const colorPicker = document.getElementById('colorPickerD');
