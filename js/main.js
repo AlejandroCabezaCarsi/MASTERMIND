@@ -19,29 +19,17 @@
 // let contador = 0;
 
 
-// let objetivo = document.getElementById('objetivo'); 
+// // FUNCIONES
 
-// const pintaColorPicker = () => {
+  
 
-//     objetivo.innerHTML = '<div id="colorPicker" type = "color"> </div>;'
+
+
+// const GuardaColores = () => {
+
+//     sessionStorage.setItem("Array Colores", JSON.stringify(arrayColores));
 
 // }
-
-// FUNCIONES
-  
-const cambiaColor = () => {
-
-style.backgroundColor = input.value
-
-
-}
-
-
-const GuardaColores = () => {
-
-    sessionStorage.setItem("Array Colores", JSON.stringify(arrayColores));
-
-}
     
 
 
@@ -260,7 +248,128 @@ const GuardaColores = () => {
 
 
 
+// const dificultad = sessionStorage.getItem('dificultad')
 
+// console.log(dificultad)
+
+
+dificultad = 10
+// const filaEleccionColor = document.getElementById('filaEleccionColor')
+// const colorPicker = document.getElementById('filaColorPicker')
+
+
+// const apareceColorPicker = () => {
+    
+//     const colorPickerD = document.createElement('input');
+//     colorPickerD.className = 'colorPickerD';
+//     colorPickerD.type = 'color'; 
+//     filaColorPicker.innerHTML = ''; 
+//     filaColorPicker.appendChild(colorPickerD);
+
+//   };
+  
+// const cambiaColor = () => { 
+//     const colorPickerD = document.getElementsByClassName('colorPickerD')[0]
+
+//     let circulosEleccion1 = document.getElementById('circulosEleccion0')
+//     let circulosEleccion2 = document.getElementById('circulosEleccion1')
+//     let circulosEleccion3 = document.getElementById('circulosEleccion2')
+//     let circulosEleccion4 = document.getElementById('circulosEleccion3')
+
+//     circulosEleccion1.style.backgroundColor = colorPickerD.value
+//     circulosEleccion2.style.backgroundColor = colorPickerD.value
+//     circulosEleccion3.style.backgroundColor = colorPickerD.value
+//     circulosEleccion4.style.backgroundColor = colorPickerD.value
+
+// }
+
+dificultad = 10
+const arrayColoresPredefinidos = ['#A0D468', '#ED5565', '#4FC1E9', '#ec87c0', '#AC92EC', '#f6bb42']
+let coloresUsuario = []
+
+
+const EligeColores = () => {
+    if (dificultad === 10) {
+        for (let i = 0; i < 4; i++) {
+            const circulosEleccion = document.createElement('div');
+            circulosEleccion.className = 'circulosMedio m-5';
+            circulosEleccion.id = 'circulosEleccion' + i;
+            circulosEleccion.style.backgroundColor = 'blue';
+            circulosEleccion.style.border = 'solid white 0.2em';
+            circulosEleccion.onclick = () => {
+                const colorPicker = document.getElementById('colorPickerD');
+                circulosEleccion.style.backgroundColor = colorPicker.value;
+                const index = parseInt(circulosEleccion.id.slice(-1));
+                coloresUsuario[index] = circulosEleccion.style.backgroundColor;
+                console.log(coloresUsuario);
+            };
+            filaEleccionColor.appendChild(circulosEleccion);
+        }
+    }
+
+              
+
+        
+    
+
+    if (dificultad===8){
+
+
+        for (i=0; i<5; i++){
+            const circulosEleccion = document.createElement('div');
+            circulosEleccion.className = 'circulosMedio m-5';
+            circulosEleccion.id = 'circulosEleccion' + i;
+            circulosEleccion.style.backgroundColor = 'blue';
+            circulosEleccion.style.border = 'solid white 0.2em';
+            circulosEleccion.onclick = () => {
+                const colorPicker = document.getElementById('colorPickerD');
+                circulosEleccion.style.backgroundColor = colorPicker.value;
+                const index = parseInt(circulosEleccion.id.slice(-1));
+                coloresUsuario[index] = circulosEleccion.style.backgroundColor;
+                console.log(coloresUsuario);
+            };
+            filaEleccionColor.appendChild(circulosEleccion);
+        }
+    }
+
+    if (dificultad===6){
+
+        for (i=0; i<6; i++){
+            const circulosEleccion = document.createElement('div');
+            circulosEleccion.className = 'circulosMedio m-5';
+            circulosEleccion.id = 'circulosEleccion' + i;
+            circulosEleccion.style.backgroundColor = 'blue';
+            circulosEleccion.style.border = 'solid white 0.2em';
+            circulosEleccion.onclick = () => {
+                const colorPicker = document.getElementById('colorPickerD');
+                circulosEleccion.style.backgroundColor = colorPicker.value;
+                const index = parseInt(circulosEleccion.id.slice(-1));
+                coloresUsuario[index] = circulosEleccion.style.backgroundColor;
+                console.log(coloresUsuario);
+            };
+            filaEleccionColor.appendChild(circulosEleccion);
+        }
+    }
+}
+
+EligeColores()
+
+
+const subeArray = () => {
+
+    if (dificultad == 10){
+
+        for (i=0;i<4;i++){
+
+            coloresUsuario.push(circulosEleccion+i[i].value)
+            console.log(circulosEleccion[i])
+            console.log(coloresUsuario)
+        }
+
+    }
+
+
+}
 
 
 

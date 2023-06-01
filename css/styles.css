@@ -271,3 +271,60 @@ background-color: green;
     background-color: red;
     border-radius: 50%;
 }
+
+
+#filaEleccionColor{
+    background-color: black;
+}
+
+.circulosMedio{
+    width: 4em;
+    height: 4em;
+    background-color: red;
+}
+
+.generalColorPicker{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.contenidoColorPicker{
+    width: 100vw;
+    height: 50em;
+    background-color: white;
+}
+
+
+.filaColorPicker{
+    height: 5em;
+    width: 30em;
+    background-color: red;
+}
+
+#colorPickerD {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100px;
+    height: 100px;
+    background-color: #AC92EC;
+    border: solid #f6bb42 0.2em;
+    cursor: pointer;
+    border-radius: 1em;
+  }
+  #colorPickerD::-webkit-color-swatch {
+    border-radius: 15px;
+    border: none;
+  }
+  #colorPickerD::-moz-color-swatch {
+    border-radius: 15px;
+    border: none;
+  }
+
+  .botonJugar{
+    width: 5em;
+    height: 3em;
+    background-color: red;
+  }
