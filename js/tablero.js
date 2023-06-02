@@ -13,10 +13,10 @@ if (dificultad === 10 && arrayColores.length != 4){
     arrayColores = ['#A0D468', '#ED5565', '#4FC1E9', '#ec87c0']
 }
 if (dificultad === 8 && arrayColores.length != 5){
-    arrayColores = ['#A0D468', '#ED5565', '#4FC1E9', '#ec87c0',, '#AC92EC']
+    arrayColores = ['#A0D468', '#ED5565', '#4FC1E9', '#ec87c0', '#AC92EC']
 }
 if (dificultad === 6 && arrayColores.length != 6){
-    arrayColores = ['#A0D468', '#ED5565', '#4FC1E9', '#ec87c0',, '#AC92EC']
+    arrayColores = ['#A0D468', '#ED5565', '#4FC1E9', '#ec87c0', '#AC92EC', '#f6bb42']
 }
 
 console.log(arrayColores)
@@ -53,26 +53,26 @@ for ( i=0; i<4 ; i++){
 
 contenedor1.addEventListener('click', () => {
     contador1++;
-    if (contador1 > 3){contador1 = 0;};
+    if (contador1 > arrayColores.length - 1 ){contador1 = 0;};
     contenedor1.style.backgroundColor = arrayColores[contador1];
     confirmarClick1 = true; 
     
 })
 contenedor2.addEventListener('click', () => {   
     contador2++;
-    if (contador2 > 3){contador2=0;};
+    if (contador2 > arrayColores.length - 1 ){contador2=0;};
     contenedor2.style.backgroundColor = arrayColores[contador2];
     confirmarClick2 = true
 })
 contenedor3.addEventListener('click', () => {
     contador3++;
-    if (contador3 > 3){contador3=0;};
+    if (contador3 > arrayColores.length - 1){contador3=0;};
     contenedor3.style.backgroundColor = arrayColores[contador3];
     confirmarClick3 = true;
 })
 contenedor4.addEventListener('click', () => {
     contador4++;
-    if (contador4 > 3){contador4=0;};
+    if (contador4 > arrayColores.length - 1){contador4=0;};
     contenedor4.style.backgroundColor = arrayColores[contador4];
     confirmarClick4 = true;
 })

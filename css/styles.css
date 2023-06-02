@@ -51,6 +51,14 @@ body{
     color: #D770AD;
 }
 
+/* ABOUT */
+
+.foto{
+    width: 2em;
+    height: 2em;
+    margin: 1em;
+}
+
 /* INPUT NOMBRE */
 
 .generalNombre{
