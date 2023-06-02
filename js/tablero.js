@@ -5,7 +5,7 @@ let arrayColores = JSON.parse(sessionStorage.getItem('Colores'))
 
 let combinacionGanadora = [];
 let combinacionUsuario = []; 
-let arrayFichasComprobacion = [];
+let arrayFichasComprobacion = ["0","0","0","0"];
 const arrayColoresPredefinidos = ['#A0D468', '#ED5565', '#4FC1E9', '#ec87c0', '#AC92EC', '#f6bb42']
 
 
@@ -47,6 +47,7 @@ for ( i=0; i<4 ; i++){
     combinacionGanadora.push(arrayColores[posicionRandom]); 
 
 }
+
 
 //CAMBIO DE COLOR EN LOS DIVS AL HACER CLICK
 
@@ -149,22 +150,23 @@ const Ganador = (arrayA,arrayB) => {
 
 //FUNCION PARA PINTAR LOS COLORES DE ACIERTOS
 
+
 const Comprobador = (arrayA,arrayB) => { 
         
-    for ( i=0 ; i<4; i++){ 
-        
+    for (let i=0 ; i<4; i++){
+
         if (arrayA.includes(arrayB[i])){ 
             let fichaComprobacion = document.getElementById("fichaComprobacion" + i);
             fichaComprobacion.style.background = '#FFFFFF'
             arrayFichasComprobacion[i] = '#FFFFFF'; 
-            
+        }else{
+            arrayFichasComprobacion[i] = '#000000'
         }
-
-        if(arrayA[i]===arrayB[i]){
+        if(arrayA[i] === arrayB[i]){
             
             let fichaComprobacion = document.getElementById("fichaComprobacion" + i);
             fichaComprobacion.style.backgroundColor = '#FF0000'
-            arrayFichasComprobacion[i] = 'FF0000';
+            arrayFichasComprobacion[i] = '#FF0000';
         }
     }
 }
