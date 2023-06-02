@@ -85,7 +85,6 @@ contenedor4.addEventListener('click', () => {
 botonCheck.addEventListener('click', () => {
 
     if (dificultad === 10 && contadorFilas === 10 || dificultad === 8 && contadorFilas === 8 || dificultad === 6 && contadorFilas === 6){
-            console.log("HOLA????")
             sessionStorage.setItem('resultado', 'perdedor')
             window.location.href = 'pantallaFinal.html'
         }  
@@ -234,6 +233,5 @@ const CreaFila = () => {
 
         contadorFilas++
 
-        console.log(contadorFilas)
     }
 }

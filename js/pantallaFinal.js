@@ -2,19 +2,16 @@ let resultado = sessionStorage.getItem('resultado');
 let nombreUsuario = sessionStorage.getItem('Nombre')
 const objetivo = document.getElementById('objetivo');
 
-console.log(nombreUsuario)
-
-if(nombreUsuario === null){
+if(nombreUsuario === null || '' ){
     nombreUsuario = 'Jugador1'
 }
 
 let boton = document.getElementById('boton'); 
 
 boton.addEventListener('click', () => {
-    window.location.href = '../MASTERMIND/index.html'
+    window.location.href = '../index.html'
 })
 
-console.log(nombreUsuario)
 
 switch (resultado) {
     case 'ganador':
