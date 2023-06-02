@@ -1,6 +1,6 @@
 
 const dificultad = parseInt(sessionStorage.getItem('Dificultad'));
-
+let contadorDificultad = dificultad + 1
 let arrayColores = JSON.parse(sessionStorage.getItem('Colores'))
 
 let combinacionGanadora = [];
@@ -19,7 +19,6 @@ if (dificultad === 6 && arrayColores.length != 6){
     arrayColores = ['#A0D468', '#ED5565', '#4FC1E9', '#ec87c0', '#AC92EC', '#f6bb42']
 }
 
-console.log(arrayColores)
 
 let contadorFilas = 1; 
 
@@ -77,14 +76,22 @@ contenedor4.addEventListener('click', () => {
     confirmarClick4 = true;
 })
 
+// FUNCION PERDEDOR
+
+
+
 //BOTON COMPROBAR
 
 botonCheck.addEventListener('click', () => {
 
+    if (dificultad === 10 && contadorFilas === 10 || dificultad === 8 && contadorFilas === 8 || dificultad === 6 && contadorFilas === 6){
+            console.log("HOLA????")
+            sessionStorage.setItem('resultado', 'perdedor')
+            window.location.href = 'pantallaFinal.html'
+        }  
 
     if(confirmarClick1 == false || confirmarClick2 == false || confirmarClick3 == false || confirmarClick4 == false){
 
-            alert ('TIENES QUE TENER CUATRO COLORES EN LA COMBINACION')    
             return;
 
             }else {
@@ -102,11 +109,8 @@ Comprobador(combinacionGanadora,combinacionUsuario);
 
 CreaFila()
 
-setTimeout( ()=>{
-    if (dificultad === 10 && contadorFilas === 11 || dificultad === 8 && contadorFilas === 9 || dificultad === 6 && contadorFilas === 7){
-        sessionStorage.setItem('resultado', perdedor)
-        window.location.href = 'pantallaFinal.html'
-}},500)
+
+     
 
 combinacionUsuario.splice(0,4)
 
@@ -229,5 +233,7 @@ const CreaFila = () => {
         filasDinamicas.appendChild(fila)
 
         contadorFilas++
+
+        console.log(contadorFilas)
     }
 }
