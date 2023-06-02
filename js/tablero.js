@@ -1,11 +1,25 @@
 
 const dificultad = parseInt(sessionStorage.getItem('Dificultad'));
 
-const arrayColores = JSON.parse(sessionStorage.getItem('Colores'))
+let arrayColores = JSON.parse(sessionStorage.getItem('Colores'))
 
 let combinacionGanadora = [];
 let combinacionUsuario = []; 
-let arrayFichasComprobacion = []
+let arrayFichasComprobacion = [];
+const arrayColoresPredefinidos = ['#A0D468', '#ED5565', '#4FC1E9', '#ec87c0', '#AC92EC', '#f6bb42']
+
+
+if (dificultad === 10 && arrayColores.length != 4){
+    arrayColores = ['#A0D468', '#ED5565', '#4FC1E9', '#ec87c0']
+}
+if (dificultad === 8 && arrayColores.length != 5){
+    arrayColores = ['#A0D468', '#ED5565', '#4FC1E9', '#ec87c0',, '#AC92EC']
+}
+if (dificultad === 6 && arrayColores.length != 6){
+    arrayColores = ['#A0D468', '#ED5565', '#4FC1E9', '#ec87c0',, '#AC92EC']
+}
+
+console.log(arrayColores)
 
 let contadorFilas = 1; 
 
