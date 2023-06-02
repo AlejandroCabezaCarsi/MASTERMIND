@@ -77,8 +77,6 @@ contenedor4.addEventListener('click', () => {
     confirmarClick4 = true;
 })
 
-// FUNCION PERDEDOR
-
 
 
 //BOTON COMPROBAR
@@ -151,31 +149,55 @@ const Ganador = (arrayA,arrayB) => {
 //FUNCION PARA PINTAR LOS COLORES DE ACIERTOS
 
 
-const Comprobador = (arrayA,arrayB) => { 
-        
-    for (let i=0 ; i<4; i++){
+const Comprobador = (arrayA, arrayB) => {
 
-        if (arrayA.includes(arrayB[i])){ 
-            let fichaComprobacion = document.getElementById("fichaComprobacion" + i);
-            fichaComprobacion.style.background = '#FFFFFF'
-            arrayFichasComprobacion[i] = '#FFFFFF'; 
-        }else{
-            arrayFichasComprobacion[i] = '#000000'
-        }
-        if(arrayA[i] === arrayB[i]){
-            
-            let fichaComprobacion = document.getElementById("fichaComprobacion" + i);
-            fichaComprobacion.style.backgroundColor = '#FF0000'
+    let arrayAACortado = [];
+    let arrayBBCortado = [];
+    let arrayAComprobado = []
+
+    for(i = 0; i < 4; i++){
+        arrayAComprobado[i] = arrayA[i]
+    }
+
+
+    for ( i = 0; i < 4; i++ ){
+
+        if (arrayA[i] === arrayB[i]){
+
             arrayFichasComprobacion[i] = '#FF0000';
+            arrayAACortado[i]= null;
+            arrayBBCortado[i]= null;    
+        }else {
+        
+            arrayFichasComprobacion[i]= "#000000"
+            arrayAACortado[i] = arrayA[i];
+            arrayBBCortado[i] = arrayB[i];
+
+        }
+
+    }
+
+    for (i = 0; i < 4 ; i++){
+
+    
+        if (arrayAACortado.includes(arrayBBCortado[i]) && arrayFichasComprobacion[i] != "#FF0000"){
+
+            arrayBBCortado[i] = null; 
+            arrayFichasComprobacion[i] = '#FFFFFF';
+        
         }
     }
+
+    console.log(arrayFichasComprobacion)
+    arrayAACortado = []
+    arrayBBCortado = []
+
 }
+
 
 //FUNCION QUE CREA LAS FILAS DINAMICAS
 
 const CreaFila = () => {
-
-
 
     if (dificultad === 10 && contadorFilas <= 10 || dificultad === 8 && contadorFilas <= 8 || dificultad === 6 && contadorFilas <= 6){
         let filasDinamicas = document.getElementById('filasDinamicas'); 
@@ -234,6 +256,11 @@ const CreaFila = () => {
         filasDinamicas.appendChild(fila)
 
         contadorFilas++
+        
+        console.log("FICHAS COMPROBACION " + arrayFichasComprobacion)
+        arrayFichasComprobacion = [];
+        console.log("FICHAS COMPROBACION VACIO " + arrayFichasComprobacion)
+
 
     }
 }
