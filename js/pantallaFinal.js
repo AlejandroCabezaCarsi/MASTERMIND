@@ -8,6 +8,11 @@ if(nombreUsuario === null){
     nombreUsuario = 'Jugador1'
 }
 
+let boton = document.getElementById('boton'); 
+
+boton.addEventListener('click', () => {
+    window.location.href = '../MASTERMIND/index.html'
+})
 
 console.log(nombreUsuario)
 
