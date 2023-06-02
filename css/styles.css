@@ -51,6 +51,23 @@ body{
     color: #D770AD;
 }
 
+/* INPUT NOMBRE */
+
+.generalNombre{
+    height: 100vh;
+    width: 100vw;
+}
+
+.inputColocacion{
+    height: 15em;
+    width: 10em;
+}
+
+#nombre{ 
+    width: 18em;
+    height: 2.5em;
+    text-align: center;
+}
 
 
 /* SELECTOR DIFICULTAD */
