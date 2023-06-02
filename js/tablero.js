@@ -90,7 +90,8 @@ CreaFila()
 
 setTimeout( ()=>{
     if (dificultad === 10 && contadorFilas === 11 || dificultad === 8 && contadorFilas === 9 || dificultad === 6 && contadorFilas === 7){
-    alert("has perdido")
+        sessionStorage.setItem('resultado', perdedor)
+        window.location.href = 'pantallaFinal.html'
 }},500)
 
 combinacionUsuario.splice(0,4)
@@ -124,7 +125,8 @@ for (i=0; i<4; i++){
 const Ganador = (arrayA,arrayB) => { 
 
     if (arrayA.join("")===arrayB.join("")){
-        alert('ENHORABUENA HAS GANADO')
+        sessionStorage.setItem('resultado', 'ganador')
+        window.location.href = 'pantallaFinal.html'
     }
 }
 
