@@ -165,8 +165,8 @@ const Comprobador = (arrayA, arrayB) => {
         if (arrayA[i] === arrayB[i]){
 
             arrayFichasComprobacion[i] = '#FF0000';
-            arrayAACortado[i]= null;
-            arrayBBCortado[i]= null;    
+            arrayAACortado[i]=  i + 10;
+            arrayBBCortado[i]= i;    
         }else {
         
             arrayFichasComprobacion[i]= "#000000"
@@ -174,21 +174,26 @@ const Comprobador = (arrayA, arrayB) => {
             arrayBBCortado[i] = arrayB[i];
 
         }
-
+        
     }
 
-    for (i = 0; i < 4 ; i++){
+    for (i = 0; i < 4; i++){
+
+        
+
+        const coincide = arrayAACortado.findIndex (element => element === arrayBBCortado[i])
+
+        if (coincide >= 0){
+            arrayFichasComprobacion[i] = "#FFFFFF";
+            arrayBBCortado[i] = i + 20;
+            arrayAACortado[i] = i + 40
+              
+        }
+        
+    }
 
     
-        if (arrayAACortado.includes(arrayBBCortado[i]) && arrayFichasComprobacion[i] != "#FF0000"){
-
-            arrayBBCortado[i] = null; 
-            arrayFichasComprobacion[i] = '#FFFFFF';
-        
-        }
-    }
-
-    console.log(arrayFichasComprobacion)
+    
     arrayAACortado = []
     arrayBBCortado = []
 
@@ -257,9 +262,9 @@ const CreaFila = () => {
 
         contadorFilas++
         
-        console.log("FICHAS COMPROBACION " + arrayFichasComprobacion)
+        
         arrayFichasComprobacion = [];
-        console.log("FICHAS COMPROBACION VACIO " + arrayFichasComprobacion)
+        
 
 
     }
