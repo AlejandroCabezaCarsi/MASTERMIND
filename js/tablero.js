@@ -177,13 +177,7 @@ const Comprobador = (arrayA, arrayB) => {
         
     }
 
-            console.log("COMBINACION GANADORA " + combinacionGanadora)
-            console.log("COMBINACION USUARIO " + combinacionUsuario)
-
-            console.log("ARRAYAA " + arrayAACortado)
-            console.log("ARRAYBB " + arrayBBCortado)
-
-            console.log(arrayFichasComprobacion)
+            
 
     
     
@@ -194,7 +188,6 @@ const Comprobador = (arrayA, arrayB) => {
         
         const coincide = arrayAACortado.findIndex (element => element === arrayBBCortado[i])
 
-        console.log(coincide)
 
         if (coincide >= 0){
             arrayFichasComprobacion[i] = "#FFFFFF";
@@ -208,10 +201,6 @@ const Comprobador = (arrayA, arrayB) => {
 
     
 
-            console.log("ARRAYAA " + arrayAACortado)
-            console.log("ARRAYBB " + arrayBBCortado)
-
-            console.log(arrayFichasComprobacion)
     
     arrayAACortado = []
     arrayBBCortado = []
